@@ -85,13 +85,6 @@ export class CollageService {
       this.drawArcticPattern(ctx, canvas.width, canvas.height, border);
     }
 
-    const date = new Date().toLocaleDateString('en-US', { day: '2-digit', month: 'long', year: 'numeric' });
-    ctx.fillStyle = ink;
-    ctx.font = `${Math.round(footer * 0.4)}px 'Boogaloo', 'Archivo Black', 'Helvetica Neue', Arial, sans-serif`;
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(`P H O T O B O O T H  ·  ${date}`, canvas.width / 2, border + contentHeight + footer / 2);
-
     return canvas;
   }
 
