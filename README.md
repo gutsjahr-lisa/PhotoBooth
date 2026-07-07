@@ -2,6 +2,8 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.5.
 
+This is a hobby project to try out [Claude Code](https://claude.com/claude-code). The idea for a browser-based photo booth is not mine — full credit goes to [mysketchbooth.com](https://mysketchbooth.com/), whose concept this reimplements for fun and learning.
+
 ## Development server
 
 To start a local development server, run:
