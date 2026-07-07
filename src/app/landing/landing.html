@@ -1,0 +1,22 @@
+<div class="landing">
+  <header class="booth-header">
+    <h1 class="booth-title">PhotoBooth</h1>
+  </header>
+
+  <img class="landing-illustration" src="/PhotoBooth.svg" alt="" aria-hidden="true" />
+
+  <app-options
+    class="landing-options"
+    [(orientation)]="orientation"
+    [(frame)]="frame"
+    [(colorMode)]="colorMode"
+  />
+
+  <div class="landing-actions">
+    <button class="start-button" type="button" (click)="startBooth()">take photos</button>
+
+    @if (errorMessage()) {
+      <p class="error-message" role="alert">{{ errorMessage() }}</p>
+    }
+  </div>
+</div>

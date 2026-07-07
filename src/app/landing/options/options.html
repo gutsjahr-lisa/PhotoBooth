@@ -1,0 +1,68 @@
+<div class="options">
+  <button
+    type="button"
+    class="options-toggle"
+    [class.expanded]="expanded()"
+    (click)="toggleExpanded()"
+    [attr.aria-expanded]="expanded()"
+    aria-controls="options-panel"
+  >
+    Options
+    <span class="options-toggle-icon" aria-hidden="true">▾</span>
+  </button>
+
+  @if (expanded()) {
+    <div class="options-panel" id="options-panel">
+      <div class="option-group" role="radiogroup" aria-label="Photo layout">
+        <button
+          type="button"
+          class="option-button"
+          [class.active]="orientation() === 'horizontal'"
+          (click)="orientation.set('horizontal')"
+        >Side by side</button>
+        <button
+          type="button"
+          class="option-button"
+          [class.active]="orientation() === 'vertical'"
+          (click)="orientation.set('vertical')"
+        >Stacked</button>
+      </div>
+
+      <div class="option-group" role="radiogroup" aria-label="Frame">
+        <button
+          type="button"
+          class="option-button"
+          [class.active]="frame() === 'white'"
+          (click)="frame.set('white')"
+        >White</button>
+        <button
+          type="button"
+          class="option-button"
+          [class.active]="frame() === 'black'"
+          (click)="frame.set('black')"
+        >Black</button>
+        <button
+          type="button"
+          class="option-button"
+          [class.active]="frame() === 'arctic'"
+          (click)="frame.set('arctic')"
+        >Arctic 🦌</button>
+      </div>
+
+      <div class="option-group" role="radiogroup" aria-label="Photo color">
+        <button
+          type="button"
+          class="option-button"
+          [class.active]="colorMode() === 'bw'"
+          (click)="colorMode.set('bw')"
+        >Black &amp; White</button>
+        <button
+          type="button"
+          class="option-button"
+          [class.active]="colorMode() === 'color'"
+          (click)="colorMode.set('color')"
+        >Vintage Color</button>
+      </div>
+    </div>
+  }
+</div>

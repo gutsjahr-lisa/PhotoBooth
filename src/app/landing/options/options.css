@@ -1,0 +1,66 @@
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.options-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  appearance: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  padding: 0.4rem 0.9rem;
+}
+
+.options-toggle-icon {
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+.options-toggle.expanded .options-toggle-icon {
+  transform: rotate(-180deg);
+}
+
+.options-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.option-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.option-button {
+  appearance: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  padding: 0.4rem 0.9rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.option-button.active {
+  background: var(--ink);
+  color: var(--paper);
+}

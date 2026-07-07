@@ -1,0 +1,23 @@
+<div class="capture-stage" [class.color-mode]="colorMode() === 'color'">
+  <video
+    #boothVideo
+    class="capture-video"
+    [srcObject]="stream()"
+    autoplay
+    playsinline
+    muted
+  ></video>
+
+  <div class="capture-hud">
+    <p class="capture-progress">Photo {{ currentShot() }} of {{ photoCount }}</p>
+    @if (countdown() > 0) {
+      <span class="countdown" aria-live="assertive">{{ countdown() }}</span>
+    } @else {
+      <span class="countdown countdown-smile">Smile!</span>
+    }
+  </div>
+
+  @if (flash()) {
+    <div class="flash" aria-hidden="true"></div>
+  }
+</div>

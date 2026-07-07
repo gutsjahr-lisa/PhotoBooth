@@ -1,1 +1,116 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles for PhotoBooth — modern black & white retro */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+:root {
+  --ink: #111111;
+  --paper: #f4f1e9;
+  --paper-dim: #e6e0d1;
+  --line: #111111;
+  --display-font: 'Boogaloo', 'Archivo Black', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  font-family: 'Archivo', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Shared design-system primitives, reused across the booth components */
+
+.booth-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  max-width: 36rem;
+}
+
+.booth-title {
+  margin: 0;
+  font-family: var(--display-font);
+  font-size: clamp(3.5rem, 11vw, 6.5rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--ink);
+  line-height: 0.95;
+}
+
+.booth-tagline {
+  margin: 0;
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+  line-height: 1.6;
+  color: var(--ink);
+  opacity: 0.65;
+}
+
+.start-button,
+.secondary-button {
+  appearance: none;
+  cursor: pointer;
+  font: inherit;
+  font-family: var(--display-font);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  transition: all 0.15s ease;
+}
+
+.start-button:focus-visible,
+.secondary-button:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.start-button {
+  font-size: 1.4rem;
+  color: var(--paper);
+  background: var(--ink);
+  padding: 0.9rem 3rem;
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.start-button:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 var(--ink);
+}
+
+.start-button:active {
+  transform: translate(0, 0);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.secondary-button {
+  font-size: 1.3rem;
+  color: var(--ink);
+  background: transparent;
+  padding: 0.8rem 2.6rem;
+}
+
+.secondary-button:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.error-message {
+  margin: 0;
+  max-width: 28rem;
+  padding: 0.9rem 1.25rem;
+  border: 2px solid var(--ink);
+  border-radius: 0.75rem;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

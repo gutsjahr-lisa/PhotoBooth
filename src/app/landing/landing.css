@@ -1,0 +1,63 @@
+.landing {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 2.5rem 1.25rem 3rem;
+  text-align: center;
+}
+
+.landing .booth-header {
+  align-items: flex-start;
+  align-self: flex-start;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+.landing .booth-title {
+  font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+}
+
+.landing-illustration {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  width: 128%;
+  height: 128%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  z-index: 0;
+}
+
+.landing-options {
+  position: relative;
+  z-index: 1;
+  align-self: flex-start;
+}
+
+.landing-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.landing .start-button {
+  font-size: 1rem;
+  padding: 0.65rem 2rem;
+  box-shadow: none;
+}
+
+.landing .start-button:hover {
+  transform: translate(0, -2px);
+}
+
+.landing .start-button:active {
+  transform: translate(0, 0);
+}

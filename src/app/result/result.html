@@ -1,0 +1,16 @@
+<div class="result">
+  <header class="booth-header">
+    <h1 class="booth-title">Your Photo Strip</h1>
+    <p class="booth-tagline">
+      Download it as a PNG — it only exists here in your browser
+      and disappears when you start over.
+    </p>
+  </header>
+
+  <img class="collage" [src]="collageUrl()" alt="Photo strip with four photos" />
+
+  <div class="result-actions">
+    <button class="start-button" type="button" (click)="download()">Download as PNG</button>
+    <button class="secondary-button" type="button" (click)="restart.emit()">Start over</button>
+  </div>
+</div>

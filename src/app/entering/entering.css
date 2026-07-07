@@ -1,0 +1,57 @@
+.entering {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.entering-illustration {
+  width: min(70vmin, 32rem);
+  filter: invert(1);
+  animation: booth-zoom 1.4s ease-in forwards;
+}
+
+.entering-text {
+  position: absolute;
+  bottom: 16%;
+  margin: 0;
+  z-index: 1;
+  font-family: var(--display-font);
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--paper);
+  opacity: 0;
+  animation: fade-in 0.6s ease 1.1s forwards;
+}
+
+@keyframes booth-zoom {
+  0% {
+    transform: scale(0.55);
+    opacity: 0;
+  }
+  35% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(7);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .entering-illustration {
+    animation: none;
+    opacity: 0.85;
+  }
+}

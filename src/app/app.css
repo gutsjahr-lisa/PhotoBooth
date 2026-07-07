@@ -1,0 +1,8 @@
+:host,
+.booth {
+  min-height: 100vh;
+}
+
+:host {
+  display: block;
+}

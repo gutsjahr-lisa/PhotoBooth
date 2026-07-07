@@ -1,0 +1,31 @@
+.result {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 1.25rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.collage {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-width: min(60rem, 92vw);
+  width: auto;
+  object-fit: contain;
+  border: 2px solid var(--ink);
+  border-radius: 0.5rem;
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+.result-actions {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
